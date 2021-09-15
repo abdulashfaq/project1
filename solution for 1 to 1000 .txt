@@ -1,0 +1,65 @@
+Suggested Answer
+The problem at hand is to calculate the sum of all numbers between 1 and 1000. So, the total count of the numbers is 1000.
+
+1. Decomposition = Breaking the bigger problem of calculating "1+2+3+4+...+1000" into smaller sub-problems.
+One possible solution can be derived from finding the sum of two numbers (let's try if that helps out in solving the problem):
+
+1 + 2 = 3, 3 + 4 = 7, 5 + 6 = 11, …
+or
+1 + 1000 = 1001, 2 + 999 = 1001, 3 + 998 = 1001, …
+
+2. Pattern Recognition = Recognizing a pattern that would lead to a logical framework to solve the problem.
+Let's consider the second sum. If you look closer, you can find a pattern - if you sum up the first number and the last number, you will get 1001. Similarly, if you sum the second number and the second last number, you will again get the same sum as 1001. This pattern would repeat itself for all 500 pairs in the range of numbers between 1 and 1000. Thus, you can conclude that the sum of numbers with equal distance from the left and the right end results in 1001 and there will be 500 such pairs (resulting in the sum of 1001), which is half of the total numbers.
+1 + 1000 = 1001 = 
+(
+1
++
+n
+)
+, which can also be written as 
+(
+n
++
+1
+)
+ where n = the last number given to you (which is 1000 in this case)
+
+3. Abstraction = Focusing on relevant details and ignoring all irrelevant information.
+Sum of all the numbers between 1 and 1000 would be equal to:
+sum of each pair * number of pairs = 1001 * (1000/2) = 1001 * 500 = 500500
+This can be written as 
+(
+n
++
+1
+)
+∗
+(
+n
+/
+2
+)
+.
+
+4. Algorithm Design = Writing solution which is general in nature and can be applied to similar problems in the future.
+Find x = last number + 1 = 
+n
++
+1
+
+Find y = total numbers / 2 = 
+n
+/
+2
+
+Then, x * y, which would be solution = 
+(
+n
++
+1
+)
+∗
+(
+n
+2
+)

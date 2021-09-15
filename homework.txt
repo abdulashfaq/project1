@@ -1,0 +1,3 @@
+Home Work 
+
+1. If your given a number n and need to print a pattern in inverted right angle triangle.?
